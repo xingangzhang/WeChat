@@ -1,5 +1,8 @@
 /* pages/startup/startup.wxss */
-
+.page-body{
+  flex-direction: column;
+  display: flex;
+}
 .page-title {
   width: 750rpx;
   height: 300rpx;
@@ -21,15 +24,16 @@
 
 .page-title-txt {
   margin: 15rpx;
+  margin-left: 100rpx;
   width: 200rpx;
   /* background: white;  */
   flex-direction: column;
   display: flex;
 }
 
-.page-title-btn {
+/* .page-title-btn {
   margin: 15rpx;
-  /* background: white;  */
+  background: white;
 }
 
 .btn-mine {
@@ -38,7 +42,7 @@
   font-size: 40rpx;
   line-height: 60rpx;
   padding: 4px 4px;
-}
+} */
 
 .page-title-name {
   margin-top: 40rpx;
@@ -52,4 +56,37 @@
   font-size: 40rpx;
   align-self: center;
   color: white;
+}
+
+.page-tab-title {
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+  text-align: center;
+  line-height: 80rpx;
+}
+.page-tab-swiper{
+  height: 780rpx;
+  text-align: center;
+}
+.swiper-tab-item {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #666;
+}
+
+.on {
+  color: #f10b2e;
+  border-bottom: 5rpx solid #f10b2e;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  text-align: center;
 }
