@@ -3,9 +3,15 @@
   <view class="page">
     <view class="page-body">
       <view class="page-title">
-        <view class="page-section-img">
+        <view class="page-title-img">
           <image class="img-head" src="姓名.png" />
-          <button class="btn-mine" type="primary">sdf</button>
+        </view>
+        <view class="page-title-txt">
+          <text class="page-title-name">{{name}}</text>
+          <text class="page-title-points">{{points}}积分</text>
+        </view>
+        <view class="page-title-btn">
+          <button class="btn-mine" type="primary">{{mine}}</button>
         </view>
       </view>
     </view>
