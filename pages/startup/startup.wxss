@@ -1,1 +1,27 @@
 /* pages/startup/startup.wxss */
+.page-title{
+  width: 750rpx; 
+  height: 300rpx;  
+  background: #20B2AA;
+  align-self:center;
+}
+.page-section-img
+{
+  flex-direction: row;
+  display:flex;
+}
+.img-head{
+  padding: 5rpx;
+  border: 0 solid #ffffff;
+  border-radius: 200rpx;
+  margin: 15rpx;
+  width:265rpx;
+  height:265rpx;
+  background: white;
+}
+.btn-mine{
+  margin-top: 180rpx;
+  margin-right: 0rpx;
+  height: 100%;
+  width: 30%;
+}

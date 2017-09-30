@@ -1,2 +1,13 @@
 <!--pages/startup/startup.wxml-->
-<text>pages/startup/startup.wxml</text>
+<view class="container">
+  <view class="page">
+    <view class="page-body">
+      <view class="page-title">
+        <view class="page-section-img">
+          <image class="img-head" src="姓名.png" />
+          <button class="btn-mine" type="primary">sdf</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
