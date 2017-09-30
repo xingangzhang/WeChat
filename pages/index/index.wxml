@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view style="width:100%;height:100%;background-image:url('img-bg.png')">
+
+</view>
+
+<view class="container">
+  <view class="inputlist">
+    <view class="weui-cell">
+      <image class="weui-subcell-image" src="姓名.png" />
+      <input class="weui-subcell" placeholder="请输入姓名" />
+    </view>
+
+    <view class="weui-cell">
+      <image class="weui-subcell-image" src="手机号.png" />
+      <input class="weui-subcell" type="number" placeholder="请输入手机号" />
+      <button class="weui-input-phone-verification-button" type="primary" size="mini">获取</button>
+    </view>
+
+    <view class="weui-cell">
+      <image class="weui-subcell-image" src="验证码.png" />
+      <input class="weui-subcell" type="number" placeholder="请输入手机验证码" />
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell-subcell">
+        <image class="weui-subcell-image" src="学校.png" />
+        <picker class="weui-subcell" bindchange="bindCollegePickerChange" value="{{index_college}}" range="{{array_college}}">
+          <view class="weui-input-college">{{array_college[index_college]}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell-subcell">
+        <image class="weui-subcell-image" src="学历.png" />
+        <picker class="weui-subcell" bindchange="bindEducationPickerChange" value="{{index_education}}" range="{{array_education}}">
+          <view class="weui-input-education">{{array_education[index_education]}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell">
+      <image class="weui-subcell-image" src="学号.png" />
+      <input class="weui-subcell" type="number" placeholder="请输入学号" />
+    </view>
+    <view class="weui-cell">
+      <image class="weui-subcell-image" src="密码.png" />
+      <input class="weui-subcell" type="text" placeholder="请输入密码" />
+    </view>
+  </view>
+  <view class="weui-cell-photo">
+    <button class="btn-choose-image" type="default" bindtap="chooseImage">拍摄学生证/一卡通</button>
+  </view>
+
+  <checkbox-group class="weui-cell-checkbox" bindchange="checkboxChange">
+    <label class="checkbox">
+      <checkbox class="checkbox" value="cb" />
+    </label>
+    <text>我已阅读并同意</text>
+    <navigator url="../logs/logs?title=协议" hover-class="navigator-hover">
+      <text class="red">协议</text>
+    </navigator>
+  </checkbox-group>
+  <view class="weui-cell-notice">
+    <text>无法注册?请发送邮件至xyzjlu@163.com</text>
+  </view>
+  <view class="btn-area">
+    <button class="btn-area-register" type="primary" formType="submit" disabled="{{disabled}}">注册</button>
+    <button formType="reset">登录</button>
+  </view>
+</view>
