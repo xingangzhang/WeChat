@@ -10,30 +10,39 @@
           <text class="page-title-name">{{name}}</text>
           <text class="page-title-points">{{points}}积分</text>
         </view>
-        <!-- <view class="page-title-btn">
-          <button class="btn-mine" type="primary">{{mine}}</button>
-        </view> -->
       </view>
-      <view class="page-tab">
-        
-        <view class="page-tab-swiper">
-          <swiper current="{{currentTab}}" duration="300" bindchange="bindSwiperChange">
-            <swiper-item>
-              <view>第一屏</view>
-            </swiper-item>
-            <swiper-item>
-              <view>第二屏</view>
-            </swiper-item>
-            <swiper-item>
-              <view>第三屏</view>
-            </swiper-item>
-          </swiper>
-        </view>
-        <view class="page-tab-title">
-          <view class="swiper-tab-item {{currentTab==0?'on':''}}" data-current="0" bindtap="swichNav">报名中的圆桌</view>
-          <view class="swiper-tab-item {{currentTab==1?'on':''}}" data-current="1" bindtap="swichNav">进行中的圆桌</view>
-          <view class="swiper-tab-item {{currentTab==2?'on':''}}" data-current="2" bindtap="swichNav">我的圆桌</view>
-        </view>
+      <view class="kind-list">
+        <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+          <view class="kind-list-item">
+            <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+              <view class="page-list-items">
+                 <view class="page-detail">
+                  <image class="img-head" src="姓名.png"></image>
+                  <view class="page-title-txt">
+                    <view class="kind-list-text">{{item.topic}}</view>
+                    <view class="kind-list-text">{{item.time}}</view>
+                  </view>
+                </view>
+                 <view class="page-detail">
+                  <view class="page-title-txt">
+                    <view class="kind-list-text">{{item.detail}}</view>
+                    <view class="kind-list-text">{{item.subject}}</view>
+                  </view>
+                </view>  
+              </view>
+            </view>
+            <!-- <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+              <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+                <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+                  <navigator url="pages/{{page}}/{{page}}" class="navigator">
+                    <view class="navigator-text">{{page}}</view>
+                    <view class="navigator-arrow"></view>
+                  </navigator>
+                </block>
+              </view>
+            </view> -->
+          </view>
+        </block>
       </view>
     </view>
   </view>

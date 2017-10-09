@@ -9,48 +9,50 @@ Page({
     mine: '我的圆桌',
     name: '李腾飞',
     points: '60',
-    tabArr: {
-      curHdIndex: 0,
-      curBdIndex: 0
-    },
-    winWidth: 0,
-    winHeight: 0,
-    // tab切换 
-    currentTab: 0,
+    list: [
+      {
+        id: '0198',
+        topic: '主题：',
+        time: '时间：',
+        detail: '活动简介：',
+        subject: '学科：',
+        count: '已加入 ',
+        name: '视图容器',
+        open: false,
+        pages: ['view', 'scroll-view', 'swiper']
+      }, {
+        id: '0199',
+        topic: '主题：',
+        time: '时间：',
+        detail: '活动简介：',
+        subject: '学科：',
+        count: '已加入 ',
+        name: '视图容器',
+        open: false,
+        pages: ['view', 'scroll-view', 'swiper']
+      }
+    ]
   },
-  bindSwiperChange: function (e) {
 
-    var that = this;
-    that.setData({ currentTab: e.detail.current });
-
-  },
-
-  swichNav: function (e) {
-    var that = this;
-
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentTab: e.target.dataset.current
-      })
+  kindToggle: function (e) {
+    var id = e.currentTarget.id, list = this.data.list;
+    for (var i = 0, len = list.length; i < len; ++i) {
+      if (list[i].id == id) {
+        list[i].open = !list[i].open
+      } else {
+        list[i].open = false
+      }
     }
+    this.setData({
+      list: list
+    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          winWidth: res.windowWidth,
-          winHeight: res.windowHeight
-        });
-      }
 
-    });
   },
 
   /**

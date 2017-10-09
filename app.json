@@ -3,12 +3,40 @@
     "pages/startup/startup",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/test/paga1"
+    "pages/test/paga1",
+    "pages/running/running",
+    "pages/end/end"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/startup/startup",
+        "selectedIconPath": "pages/startup/姓名.png",
+        "iconPath": "pages/startup/姓名.png",
+        "text": "报名中的圆桌"
+      },
+      {
+        "pagePath": "pages/running/running",
+        "selectedIconPath": "pages/startup/姓名.png",
+        "iconPath": "pages/startup/姓名.png",
+        "text": "进行中的圆桌"
+      },
+      {
+        "pagePath": "pages/end/end",
+        "selectedIconPath": "pages/startup/姓名.png",
+        "iconPath": "pages/startup/姓名.png",
+        "text": "已结束的圆桌"
+      }
+    ]
   }
 }

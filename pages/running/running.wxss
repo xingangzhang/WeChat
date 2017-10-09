@@ -1,11 +1,9 @@
+/* pages/running/running.wxss */
 /* pages/startup/startup.wxss */
-
-.page-body {
+.page-body{
   flex-direction: column;
   display: flex;
-  align-items: center;
 }
-
 .page-title {
   width: 750rpx;
   height: 300rpx;
@@ -46,17 +44,4 @@
   font-size: 40rpx;
   align-self: center;
   color: white;
-}
-
-.page-list-items {
-  width: 700rpx;
-  height: 600rpx;
-  margin-top: 20rpx;
-  margin-bottom: 10rpx;
-  border: 0 solid #fff;
-  border-color: white;
-  border-radius: 20rpx;
-  background: #20b2aa;
-  flex-direction: row;
-  display: flex;
 }

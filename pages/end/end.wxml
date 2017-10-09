@@ -1,0 +1,16 @@
+<!--pages/end/end.wxml-->
+<view class="container">
+  <view class="page">
+    <view class="page-body">
+      <view class="page-title">
+        <view class="page-title-img">
+          <image class="img-head" src="{{title_image}}" />
+        </view>
+        <view class="page-title-txt">
+          <text class="page-title-name">{{name}}</text>
+          <text class="page-title-points">{{points}}积分</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
