@@ -15,20 +15,22 @@
         <block wx:for-items="{{list}}" wx:key="{{item.id}}">
           <view class="kind-list-item">
             <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
-              <view class="page-list-items">
-                 <view class="page-detail">
+              <view class="list-item">
+                <navigator url="../../pages/mine/mine" open-type="switchTab" class="navigator">
                   <image class="img-head" src="姓名.png"></image>
-                  <view class="page-title-txt">
-                    <view class="kind-list-text">{{item.topic}}</view>
-                    <view class="kind-list-text">{{item.time}}</view>
-                  </view>
+                </navigator>
+                <view class="list-item-txt">
+                  <view class="kind-list-topic">主题：{{item.topic}}</view>
+                  <view class="kind-list-time">时间：{{item.time}}</view>
                 </view>
-                 <view class="page-detail">
-                  <view class="page-title-txt">
-                    <view class="kind-list-text">{{item.detail}}</view>
-                    <view class="kind-list-text">{{item.subject}}</view>
-                  </view>
-                </view>  
+              </view>
+              <view class="list-item">
+                <view class="kind-list-left-tile">活动简介：</view>
+                <view class="kind-list-detail">{{item.detail}}</view>
+              </view>
+              <view class="list-item-bottom">
+                <view class="kind-list-left-tile">{{item.subject}}</view>
+                <view class="kind-list-count">{{item.count}}</view>
               </view>
             </view>
             <!-- <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
