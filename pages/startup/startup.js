@@ -9,6 +9,14 @@ Page({
     mine: '我的圆桌',
     name: '李腾飞',
     points: '60',
+    tabArr: {
+      curHdIndex: 0,
+      curBdIndex: 0
+    },
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换 
+    currentTab: 0,
     list: [
       {
         id: '0198',
@@ -32,7 +40,9 @@ Page({
         pages: ['view', 'scroll-view', 'swiper']
       }
     ]
+
   },
+
 
   kindToggle: function (e) {
     var id = e.currentTarget.id, list = this.data.list;
@@ -47,11 +57,37 @@ Page({
       list: list
     });
   },
+  bindSwiperChange: function (e) {
+
+     var  that = this;
+    that.setData({ currentTab: e.detail.current });
+    console.log('swiper', e.detail.current);
+  },
+
+  swichNav:  function (e) {
+    var  that = this;
+    if  (this.data.currentTab === e.target.dataset.current) {
+       return  false;
+    }  else {
+       that.setData({
+        currentTab:  e.target.dataset.current
+      })
+    }
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.getSystemInfo({
+      success:  function (res) {
+         that.setData({
+          winWidth:  res.windowWidth,
+          winHeight:  res.windowHeight
+        });
+      }
+    });
 
   },
 
