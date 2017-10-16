@@ -1,2 +1,46 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="container">
+  <view class="page">
+    <view class="page-body">
+      <view class="page-title">
+        <view class="page-title-img">
+          <image class="img-head" src="{{img_src}}" />
+        </view>
+        <view class="page-title-txt">
+          <text class="mine-name-txt">{{mine_name}}</text>
+        </view>
+        <view class="page-title-txt">
+          <text class="mine-txt">{{mine_college}}</text>
+        </view>
+        <view class="page-title-txt">
+          <text class="mine-txt">{{mine_education}}</text>
+        </view>
+        <view class="page-title-txt">
+          <text class="mine-point-txt">{{mine_point}}积分</text>
+        </view>
+        <view class="page-title-txt">
+
+          <view class="page-point-img">
+            <image class="point-img" src="{{point_image[0]}}"></image>
+            <image class="point-img" src="{{point_image[1]}}"></image>
+            <image class="point-img" src="{{point_image[2]}}"></image>
+            <image class="point-img" src="{{point_image[3]}}"></image>
+            <image class="point-img" src="{{point_image[4]}}"></image>
+          </view>
+        </view>
+
+        <view class="page-title-txt">
+          <text class="mine-action-txt">发起圆桌：{{submitNum}}场  </text>
+          <text class="mine-action-txt">参与圆桌：{{participateNum}}场</text>
+        </view>
+
+        <view class="page-notice-txt">
+          <text class="mine-txt">修改密码</text>
+        </view>
+        <view class="page-notice-txt">
+          <text class="mine-txt">修改资料?小圆桌有BUG?请发邮件至xyzjlu@163.com</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

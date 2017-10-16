@@ -5,14 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    img_src:'姓名.png',
+    mine_name:'李腾飞',
+    mine_education:'博士生',
+    mine_college:'计算机科学与技术',
+    mine_point:0,
+    submitNum:0,
+    participateNum:0,
+    point_image: ['月亮.png', '星.png', '星.png', '星.png', '星.png'],
+    point_index:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log('mine img_src', options.points);
+    this.setData({ img_src: options.img_src, mine_point: options.points});
   },
 
   /**

@@ -1,12 +1,15 @@
 {
   "pages": [
     "pages/startup/startup",
+    "pages/list/signListPage",
     "pages/index/index",
+    "pages/mine/mine",
     "pages/logs/logs",
     "pages/test/paga1",
     "pages/running/running",
     "pages/end/end",
-    "pages/mine/mine"
+    "pages/list/runListPage",
+    "pages/list/endListPage"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,13 +40,6 @@
         "selectedIconPath": "pages/startup/姓名.png",
         "iconPath": "pages/startup/姓名.png",
         "text": "2"
-      }
-      ,
-      {
-        "pagePath": "pages/mine/mine",
-        "selectedIconPath": "pages/startup/姓名.png",
-        "iconPath": "pages/startup/姓名.png",
-        "text": "3"
       }
     ]
   }

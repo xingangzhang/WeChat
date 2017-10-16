@@ -1,1 +1,62 @@
 /* pages/mine/mine.wxss */
+
+.page-body {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.page-title {
+  width: 750rpx;
+  height: 680rpx;
+  background: #20b2aa;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.img-head {
+  padding: 5rpx;
+  border: 0 solid #fff;
+  border-radius: 200rpx;
+  margin: 15rpx;
+  width: 200rpx;
+  height: 200rpx;
+  background: white;
+}
+
+.page-title-txt {
+  margin-bottom: 5rpx;
+  font-size: 40rpx;
+  color: white;
+}
+
+.page-notice-txt {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  color: blue;
+  font-size: 32rpx;
+  text-decoration: underline;
+}
+.mine-point-txt{
+  margin-top: 10rpx;
+  font-size: 32rpx;
+}
+.mine-txt{
+  font-size: 32rpx;
+}
+
+.mine-action-txt{
+  font-size: 36rpx;
+}
+
+.page-point-img{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.point-img{
+  width: 32rpx;
+  height: 32rpx;
+}

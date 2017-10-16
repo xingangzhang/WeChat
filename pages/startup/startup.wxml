@@ -4,7 +4,7 @@
     <view class="page-body">
       <view class="page-title">
         <view class="page-title-img">
-          <image class="img-head" src="{{title_image}}" />
+          <image class="img-head" bindtap="bindViewTapToMine" src="{{title_image}}" />
         </view>
         <view class="page-title-txt">
           <text class="page-title-name">{{name}}</text>
@@ -23,19 +23,17 @@
 
       <view class="page-tab-swiper">
 
-        <swiper class="page-tab-swiper" current="{{currentTab}}" duration="300" bindchange="bindSwiperChange">
-
+        <swiper class="page-tab-swiper" style="height: {{listWidth}}rpx" current="{{currentTab}}" duration="300" bindchange="bindSwiperChange">
           <swiper-item>
             <view class="swiper-item-page">
-
               <view class="kind-list">
-                <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+                <block wx:for-items="{{sign_list}}" wx:key="{{item.id}}">
                   <view class="kind-list-item">
-                    <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+                    <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="signListKindToggle">
                       <view class="list-item">
-                        <navigator url="../../pages/mine/mine" open-type="switchTab" class="navigator">
+                        <view>
                           <image class="img-head" src="姓名.png"></image>
-                        </navigator>
+                        </view>
                         <view class="list-item-txt">
                           <view class="kind-list-topic">主题：{{item.topic}}</view>
                           <view class="kind-list-time">时间：{{item.time}}</view>
@@ -53,23 +51,24 @@
                   </view>
                 </block>
               </view>
-
-
-
             </view>
           </swiper-item>
-
           <swiper-item>
 
             <view class="swiper-item-page">
-
-              </view>
-          </swiper-item>
- <view class="list-item-txt">
+              <view class="kind-list">
+                <block wx:for-items="{{run_list}}" wx:key="{{item.id}}">
+                  <view class="run-kind-list-item">
+                    <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="runListKindToggle">
+                      <view class="list-item">
+                        <view>
+                          <image class="img-head" src="姓名.png"></image>
+                        </view>
+                        <view class="list-item-txt">
                           <view class="kind-list-topic">主题：{{item.topic}}</view>
                           <view class="kind-list-time">时间：{{item.time}}</view>
                         </view>
-                      
+                      </view>
                       <view class="list-item">
                         <view class="kind-list-left-tile">活动简介：</view>
                         <view class="kind-list-detail">{{item.detail}}</view>
@@ -78,14 +77,47 @@
                         <view class="kind-list-left-tile">{{item.subject}}</view>
                         <view class="kind-list-count">{{item.count}}</view>
                       </view>
+                    </view>
+                  </view>
+                </block>
+              </view>
+            </view>
+
+          </swiper-item>
+
           <swiper-item>
 
-            <view>第三屏</view>
+            <view class="swiper-item-page">
+              <view class="kind-list">
+                <block wx:for-items="{{end_list}}" wx:key="{{item.id}}">
+                  <view class="end-kind-list-item">
+                    <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="endListKindToggle">
+                      <view class="list-item">
+                        <view>
+                          <image class="img-head" src="姓名.png"></image>
+                        </view>
+                        <view class="list-item-txt">
+                          <view class="kind-list-topic">主题：{{item.topic}}</view>
+                          <view class="kind-list-time">时间：{{item.time}}</view>
+                        </view>
+                      </view>
+                      <view class="list-item">
+                        <view class="kind-list-left-tile">活动简介：</view>
+                        <view class="kind-list-detail">{{item.detail}}</view>
+                      </view>
+                      <view class="list-item-bottom">
+                        <view class="kind-list-left-tile">{{item.subject}}</view>
+                        <view class="kind-list-count">{{item.count}}</view>
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </view>
+            </view>
+
           </swiper-item>
         </swiper>
       </view>
-      
-
     </view>
   </view>
 </view>
